@@ -47,6 +47,7 @@ Please make an appointment by email.
 | 6  | 21 Out   | No Lecture (SPLASH 2024) | Autonomous Study
 | 6  | 23, 24 Out   | No Lab Class | Homework 2
 | 7  | 28 Out   | Security Mechanisms in Internet Applications |
+| 7  | 30 Out (Extra)   | Model-Based Access Control |
 | 7  | 30 Out, 31 Out | Project - Part 1 |
 | 8  | 4 Nov   |  Q&A  |
 | 8  | 6 Nov, 7 Nov   |  |
