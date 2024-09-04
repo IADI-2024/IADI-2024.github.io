@@ -33,11 +33,11 @@ Please make an appointment by email.
 
 | Week | Date | Topics | Slides/Handouts | Resources |
 | -------- | -------- | -------- | -------- | -------- |
-| 1  | 16 Set   | Course Overview.  |  
-| 1  | 18, 19 Set   | Kick-the-Tyres. First SpringBoot Application. |  
-| 2  | 23 Set   | No Lecture (ECOOP 2024) |  Autonomous Study 
-| 2  | 25, 26 Set   | No Lab Class |   Homework 1 |
-| 3  | 30 Set   | Software Architecture. Services and Micro Services |
+| 1  | 16 Sep   | No Lecture (ECOOP 2024) |   
+| 1  | 18, 19 Sep   | No Lab Class |    |
+| 2  | 23 Sep   | Course Overview  |  
+| 2  | 25, 26 Sep   | Kick-the-Tyres. First SpringBoot Application. |  
+| 3  | 30 Sep   | Software Architecture. Services and Micro Services |
 | 3  | 2, 3 Out   | Design of a Layered Architecture | Project Assignment |
 | 4  | 7 Out   | Data Abstraction, JPA & Hibernate |
 | 4  | 9 Out (Extra) | More Data Abstraction, Associations and Custom Queries |
