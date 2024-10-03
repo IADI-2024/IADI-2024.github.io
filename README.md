@@ -37,7 +37,7 @@ Please make an appointment by email.
 | 1  | 18, 19 Sep   | No Lab Class |    |
 | 2  | 23 Sep   | Course Overview  |  
 | 2  | 25, 26 Sep   | Kick-the-Tyres. First SpringBoot Application. |  
-| 3  | 30 Sep   | Software Architecture. Services and Micro Services |
+| 3  | 30 Sep   | Software Architecture. Services and Micro Services | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) |
 | 3  | 2, 3 Out   | Design of a Layered Architecture | Project Assignment |
 | 4  | 7 Out   | Data Abstraction, JPA & Hibernate |
 | 4  | 9 Out (Extra) | More Data Abstraction, Associations and Custom Queries |
