@@ -26,7 +26,7 @@ Please make an appointment by email.
 
 | Instructor | Schedule | E-mail |
 | -------- | -------- | -------- |
-| João Costa Seco | Monday 14h30 (Gab. P2/1-II) | joao.seco@fct.unl.pt |
+| João Costa Seco | Monday 14h30 (Gab. P2/1-II) - (send email the day before) | joao.seco@fct.unl.pt |
 
 ## Program, Schecule, and Materials
 
