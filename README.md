@@ -35,13 +35,13 @@ Please make an appointment by email.
 | -------- | -------- | -------- | -------- | -------- |
 | 1  | 16 Sep   | No Lecture (ECOOP 2024) |   
 | 1  | 18, 19 Sep   | No Lab Class |    |
-| 2  | 23 Sep   | Course Overview  |  
-| 2  | 25, 26 Sep   | Kick-the-Tyres. First SpringBoot Application. |  
-| 3  | 30 Sep   | Software Architecture. Services and Micro Services | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) |
-| 3  | 2, 3 Out   | Design of a Layered Architecture | Project Assignment |
-| 4  | 7 Out   | Data Abstraction, JPA & Hibernate |
-| 4  | 9 Out (Extra) | More Data Abstraction, Associations and Custom Queries |
-| 4  | 9, 10 Out   | Design of a Data Layer |
+| 2  | 23 Sep   | Course Overview  | [slides](slides/IADI%20slides%202024%20-%201.pdf) 
+| 2  | 25, 26 Sep   | Kick-the-Tyres. First SpringBoot Application. |  | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab1
+| 3  | 30 Sep   | Software Architecture. Services and Micro Services | [slides](slides/IADI%20slides%202024%20-%202.pdf) |  |
+| 3  | 2, 3 Out   | Design of a Layered Architecture |  | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab2 |
+| 4  | 7 Out   | Design of a Layered Architecture, Data Abstraction, JPA & Hibernate | [slides](slides/IADI%20slides%202024%20-%203.pdf) | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab3
+| 4  | 9 Out (Extra) | More Data Abstraction, Associations and Custom Queries | Project Assignment
+| 4  | 9, 10 Out   | Design of a Data Layer | 
 | 5  | 14 Out   | Continuous Integration, Unit Testing, Mock Services |
 | 5  | 16, 17 Out   | Project Support |
 | 6  | 21 Out   | No Lecture (SPLASH 2024) | Autonomous Study
