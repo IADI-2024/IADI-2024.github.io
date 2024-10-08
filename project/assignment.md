@@ -3,7 +3,7 @@
 
 ### Change log
 
-- 2023-10-08: Initial version, this is a draft, still up for discussion and receiving feedback.
+- 2023-10-08: Initial version, this is a draft, still up for discussion and receiving feedback. Some points are marked "TBA" (e.g., "more to come"). All changes will be reported in this area.
 
 ## Introduction
 
@@ -15,7 +15,10 @@ tool](https://github.com/picastlo/picastlo.github.io) to make tactile paintings.
 
 The functionalities involved include managing users and user authentication,
 reading posts according to their visibility (groups/friends), make new posts
-that text, and images, create, use, and share Picastlo pipelines. 
+that text, and images, create, use, and share Picastlo pipelines. You will have
+to analyse and modify the code in the prototype available that is designed as a
+standalone client application. Namely, you will need to start by understanding
+what is a pipeline and how to represent it on a database.
 
 The actors in this systems are unauthenticated users and regular registered
 Picastlo Users. Unauthenticated users can use Picastlo GUI and see posts,
@@ -148,6 +151,6 @@ You should receive the link to the assignment by email and instructions to regis
 
 ## Important Dates
 
-First submission: 2022-10-31
+First submission: 2024-10-31
 
-Second submission: 2022-12-19
+Second submission: 2024-12-19
