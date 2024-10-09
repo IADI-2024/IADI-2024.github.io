@@ -34,7 +34,7 @@ a pipeline, theirs or of another user, that (optionally includes the initial
 image) into Picastlo, change the pipeline, and download the result to print in a
 3D printer. In the end, The user may store the pipeline in their own profile,
 customizing the visibility parameters (public, private, or friends only). A user
-my sign in to the system. 
+needs to sign in to the system in order to see the timeline, and profile.
 
 The operations that you must implement thoroughly need to support a client
 application where it is possible to follow the workflow above. All other
@@ -126,11 +126,11 @@ All deliverables should be submitted by pushing them to the repository of the pr
 
 3. OpenAPI description per microservice and application (a pdf file printing the live specification of each server)
 
-4. A Server-side application (a commit in the repository - tag SERVER)
+4. A Server-side application (a commit in the repository - tag SERVER in the main branch)
 
 5. Automatic unit and integration tests in a continuous integration style
 
-6. Client-side application (a commit in the repository - tag CLIENT). 
+6. Client-side application (a commit in the repository - tag CLIENT in the main branch). 
 
 7. IFML specification of the UI.
 
