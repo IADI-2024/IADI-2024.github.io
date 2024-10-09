@@ -40,7 +40,7 @@ Please make an appointment by email.
 | 3  | 30 Sep   | Software Architecture. Services and Micro Services | [slides](slides/IADI%20slides%202024%20-%202.pdf) |  |
 | 3  | 2, 3 Out   | Design of a Layered Architecture |  | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab2 |
 | 4  | 7 Out   | Design of a Layered Architecture, Data Abstraction, JPA & Hibernate | [slides](slides/IADI%20slides%202024%20-%203.pdf) | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab3
-| 4  | 9 Out (Extra) | More Data Abstraction, Associations and Custom Queries | Project Assignment
+| 4  | 9 Out (Extra) | More Data Abstraction, Associations and Custom Queries | [Project Assignment](project/assignment.md)
 | 4  | 9, 10 Out   | Design of a Data Layer | 
 | 5  | 14 Out   | Continuous Integration, Unit Testing, Mock Services |
 | 5  | 16, 17 Out   | Project Support |
