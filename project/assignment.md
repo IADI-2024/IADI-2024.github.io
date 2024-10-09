@@ -151,6 +151,6 @@ You should receive the link to the assignment by email and instructions to regis
 
 ## Important Dates
 
-First submission: 2024-10-31
+First submission: 2024-11-03
 
 Second submission: 2024-12-19
