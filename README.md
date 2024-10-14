@@ -39,15 +39,15 @@ Please make an appointment by email.
 | 2  | 25, 26 Sep   | Kick-the-Tyres. First SpringBoot Application. |  | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab1
 | 3  | 30 Sep   | Software Architecture. Services and Micro Services | [slides](slides/IADI%20slides%202024%20-%202.pdf) |  |
 | 3  | 2, 3 Out   | Design of a Layered Architecture |  | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab2 |
-| 4  | 7 Out   | Design of a Layered Architecture, Data Abstraction, JPA & Hibernate | [slides](slides/IADI%20slides%202024%20-%203.pdf) | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab3
+| 4  | 7 Out   | Design of a Layered Architecture, Data Abstraction, JPA & Hibernate, Continuous Integration, Unit Testing, Mock Services | [slides](slides/IADI%20slides%202024%20-%203.pdf) | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab3
 | 4  | 9 Out (Extra) | More Data Abstraction, Associations and Custom Queries | [Project Assignment](project/assignment.md)
 | 4  | 9, 10 Out   | Design of a Data Layer | 
-| 5  | 14 Out   | Continuous Integration, Unit Testing, Mock Services |
+| 5  | 14 Out   | Security Mechanisms in Internet Applications |
 | 5  | 16, 17 Out   | Project Support |
 | 6  | 21 Out   | No Lecture (SPLASH 2024) | Autonomous Study
 | 6  | 23, 24 Out   | No Lab Class | Homework 2
-| 7  | 28 Out   | Security Mechanisms in Internet Applications |
-| 7  | 30 Out (Extra)   | Model-Based Access Control |
+| 7  | 28 Out   | Model-Based Access Control |
+| 7  | 30 Out (Extra)   |  |
 | 7  | 30 Out, 31 Out | Project - Part 1 |
 | 8  | 4 Nov   |  Q&A  |
 | 8  | 6 Nov, 7 Nov   |  |
