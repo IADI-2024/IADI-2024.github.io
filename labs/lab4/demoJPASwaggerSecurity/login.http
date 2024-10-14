@@ -1,0 +1,17 @@
+### Send POST request with json body
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+### Send POST request with json body
+POST http://localhost:8080/login
+Content-Type: binary/octet-stream
+
+{
+  "username": "admin",
+  "password": "admin"
+}
