@@ -55,6 +55,7 @@ open class SecurityConfig {
         return http.build()
     }
 
+    // To declare a temporary version with a single user.
 //    @Bean
 //    fun userDetailsService(): UserDetailsService {
 //        val userDetails = User.withDefaultPasswordEncoder()
@@ -69,16 +70,16 @@ open class SecurityConfig {
     fun authenticationManager(authConfiguration: AuthenticationConfiguration): AuthenticationManager? {
         return authConfiguration.authenticationManager
     }
-}
 
-//@Bean
-//fun passwordEncoder(): PasswordEncoder = BCryptPasswordEncoder()
+    @Bean
+    fun passwordEncoder(): PasswordEncoder = BCryptPasswordEncoder()
+}
 
 @Service
 class MyUserDetailsService(val users: UserService) : UserDetailsService {
     override fun loadUserByUsername(username: String?): UserDetails? =
         users.findUserById(username).map {
-            User.withDefaultPasswordEncoder()
+            User.builder()
                 .username(it.username)
                 .password(it.password)
                 .roles(it.roles)
