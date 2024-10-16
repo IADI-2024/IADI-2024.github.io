@@ -50,7 +50,7 @@ open class SecurityConfig {
             addFilterBefore<BasicAuthenticationFilter>(JWTAuthenticationFilter())
 
             //formLogin { }
-            httpBasic { }
+            httpBasic { } // ONLY FOR TESTING, removing will remove the BasicAuthenticationFilter from the chain, see addFilter above
         }
         return http.build()
     }

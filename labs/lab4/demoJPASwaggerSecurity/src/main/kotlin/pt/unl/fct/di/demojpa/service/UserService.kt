@@ -12,6 +12,5 @@ class UserService {
 
     // This is a mock of a service that would store users in the database
     fun findUserById(username: String?): Optional<MyUserDetails> =
-//        Optional.of(MyUserDetails("admin","admin","ADMIN"))
          Optional.of(MyUserDetails("admin",BCryptPasswordEncoder().encode("admin"),"ADMIN"))
 }
