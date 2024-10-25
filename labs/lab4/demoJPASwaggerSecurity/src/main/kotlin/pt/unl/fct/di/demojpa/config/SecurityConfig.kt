@@ -37,7 +37,7 @@ open class SecurityConfig {
         http.invoke {
             csrf { disable() }
             authorizeHttpRequests {
-                authorize("/v3/api-docs", permitAll)
+                authorize("/v3/api-docs/**", permitAll)
                 authorize("/swagger-ui/**", permitAll)
                 authorize(anyRequest, authenticated)
             }
