@@ -34,7 +34,8 @@ data class UserLogin(var username:String, var password:String) {
 
 class UserPasswordAuthenticationFilterToJWT (
     defaultFilterProcessesUrl: String?,
-    private val anAuthenticationManager: AuthenticationManager?
+    val anAuthenticationManager: AuthenticationManager?,
+    val utils:JWTUtils
 ) : AbstractAuthenticationProcessingFilter(defaultFilterProcessesUrl) {
 
     override fun attemptAuthentication(request: HttpServletRequest?,
@@ -62,7 +63,7 @@ class UserPasswordAuthenticationFilterToJWT (
                                           auth: Authentication) {
 
         // When returning from the Filter loop, add the token to the response
-        addResponseToken(auth, response)
+        utils.addResponseToken(auth, response)
     }
 }
 
