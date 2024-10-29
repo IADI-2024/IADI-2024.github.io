@@ -73,3 +73,4 @@ annotation class CanCreateResources
 
 @PreAuthorize("@capabilitiesService.canReadOne(principal, #id)")
 annotation class CanReadOneResource
+

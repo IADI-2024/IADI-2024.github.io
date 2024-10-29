@@ -1,5 +1,6 @@
 package org.example.service.config.filters
 
+import com.fasterxml.jackson.databind.ObjectMapper
 import io.jsonwebtoken.ExpiredJwtException
 import io.jsonwebtoken.Jwts
 import jakarta.servlet.FilterChain

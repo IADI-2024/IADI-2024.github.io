@@ -85,6 +85,7 @@ class ResourceAPIConfig(
     private fun getResourceToken():String {
         val claims = HashMap<String, Any?>()
 
+        // If needed include the username
         //val authentication = SecurityContextHolder.getContext().authentication
         //val username = authentication...
 
