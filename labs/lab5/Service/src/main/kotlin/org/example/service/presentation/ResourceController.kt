@@ -14,5 +14,5 @@ class ResourceController: ResourceAPI {
 
     override fun createResource(resource: ResourceDTO): Long = 4
 
-    override fun getOne(id: Long) = ResourceWIdDTO(1,"one")
+    override fun getOne(id: Long) = ResourceWIdDTO(id,"one")
 }

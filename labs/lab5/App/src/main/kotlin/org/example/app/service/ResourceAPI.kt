@@ -87,7 +87,7 @@ class ResourceAPIConfig(
 
         // If needed include the username
         //val authentication = SecurityContextHolder.getContext().authentication
-        //val username = authentication...
+        //val username = authentication.username
 
         claims["username"] = "John"
         claims["capabilities"] = getCapabilities("John")

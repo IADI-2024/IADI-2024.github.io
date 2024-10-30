@@ -1,11 +1,9 @@
 package org.example.service.config.security
 
 import org.example.service.config.filters.UserAuthToken
-import org.example.service.presentation.ResourceDTO
 import org.example.service.presentation.ResourceWIdDTO
 import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.stereotype.Service
-import java.lang.annotation.Documented
 import java.security.Principal
 
 // TODO: do an enum for operations
@@ -14,21 +12,21 @@ import java.security.Principal
 class capabilitiesService {
     fun canReadAll(user: Principal): Boolean {
         val capabilities = (user as UserAuthToken).capabilities
-        val operation = capabilities.get(0) // 0 means * because we assume that ids begin in 1
+        val operation = capabilities[0L] // 0 means * because we assume that ids begin in 1
         return operation != null && lessOrEqual("READ", operation)
     }
 
     fun canCreate(user: Principal): Boolean {
         val capabilities = (user as UserAuthToken).capabilities
-        val operation = capabilities.get(0)
+        val operation = capabilities[0L]
         return operation != null && lessOrEqual("CREATE", operation)
     }
 
     fun canReadOne(user: Principal, id:Long): Boolean {
         val capabilities = (user as UserAuthToken).capabilities
 
-        val operationOne = capabilities.get(id)
-        val operationAll = capabilities.get(0L)
+        val operationOne = capabilities[id]
+        val operationAll = capabilities[0L]
 
         return operationOne != null && lessOrEqual("READ", operationOne) ||
                operationAll != null && lessOrEqual("READ", operationAll)

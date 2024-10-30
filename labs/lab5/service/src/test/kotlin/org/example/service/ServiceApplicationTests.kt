@@ -3,6 +3,7 @@ package org.example.service
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.example.service.config.filters.UserAuthToken
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
@@ -50,6 +51,12 @@ class ServiceApplicationTests {
     }
 
     @Test
+    @WithMockUser(username = "user", authorities = ["ROLE_ADMIN"])
+    fun `test with mock user`() {
+        val auth = SecurityContextHolder.getContext().authentication
+    }
+
+    @Test
     @WithUserAndCapabilities(
         username = "admin",
         role = "ADMIN",
@@ -60,6 +67,19 @@ class ServiceApplicationTests {
         mockMvc
             .perform(get("/resources/1"))
             .andExpect(status().isOk)
+    }
+
+    @Test
+    @WithUserAndCapabilities(
+        username = "admin",
+        role = "ADMIN",
+        capabilities = "{\"1\":\"READ\"}",
+    )
+    fun `test the simple READ Capability on the wrong resource`() {
+        val auth = SecurityContextHolder.getContext().authentication
+        mockMvc
+            .perform(get("/resources/2"))
+            .andExpect(status().isForbidden)
     }
 
     @Test
@@ -98,6 +118,19 @@ class ServiceApplicationTests {
         val auth = SecurityContextHolder.getContext().authentication
         mockMvc
             .perform(get("/resources/1"))
+            .andExpect(status().isOk)
+    }
+
+    @Test
+    @WithUserAndCapabilities(
+        username = "admin",
+        role = "ADMIN",
+        capabilities = "{\"0\":\"ALL\"}",
+    )
+    fun `test 0 resource matcher on another resource`() {
+        val auth = SecurityContextHolder.getContext().authentication
+        mockMvc
+            .perform(get("/resources/2"))
             .andExpect(status().isOk)
     }
 

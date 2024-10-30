@@ -55,7 +55,7 @@ class JWTAuthenticationFilter(val utils:JWTUtils): GenericFilterBean() {
                 (claims["capabilities"] as ArrayList<LinkedHashMap<String, *>>).forEach {
                     val key = (it["resource"] as Integer).toLong()
                     val operation = it["operation"] as String
-                    capabilities.put(key, operation)
+                    capabilities[key] = operation
                 }
 
                 val authentication = UserAuthToken(
