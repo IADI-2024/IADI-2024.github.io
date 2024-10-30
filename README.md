@@ -46,11 +46,10 @@ Please make an appointment by email.
 | 5  | 16, 17 Out   | Project Support | | 
 | 6  | 21 Out   | No Lecture (SPLASH 2024) | 
 | 6  | 23, 24 Out   | No Lab Class | 
-| 7  | 28 Out   | Token-Based Security and Micro-services |
-| 7  | 30 Out (Extra)   |  |
-| 7  | 30 Out, 31 Out | Project - Part 1 |
+| 7  | 28 Out   | Token-Based Security and Micro-services | [slides](slides/IADI%20slides%202024%20-%206.pdf) | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab5
+| 7  | 30 Out, 31 Out |  |
 | 8  | 4 Nov   |  Q&A  |
-| 8  | 6 Nov, 7 Nov   |  |
+| 8  | 6 Nov, 7 Nov   | Project - Part 1 |
 | 8  | TBD  | Test 1 |
 | 9  | 11 Nov   | User-centric development - Client Side Reactive Programming (React) |
 | 9  | 13 Nov, 14 Nov   | No Lab Class  |
