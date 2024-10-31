@@ -1,11 +1,13 @@
 package org.example.app.service
 
+import feign.Logger
 import feign.RequestInterceptor
 import feign.Response
 import feign.codec.ErrorDecoder
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
 import org.example.app.data.ResourceRepository
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.cloud.openfeign.FallbackFactory
 import org.springframework.cloud.openfeign.FeignClient
@@ -51,6 +53,8 @@ class ResourceAPIConfig(
     @Value("\${jwt.subject}") val subject: String,
     val resources: ResourceRepository) {
 
+    val logger: org.slf4j.Logger = LoggerFactory.getLogger(ResourceAPIConfig::class.java)
+
     @Bean
     fun resourceAPIInterceptor(): RequestInterceptor {
         return RequestInterceptor { template ->
@@ -79,6 +83,7 @@ class ResourceAPIConfig(
         // may use "0" to match all resources
         // may be perfected with lists and general matchers
 
+        logger.info("Adding capabilities: ${capabilities.toString()}")
         return capabilities
     }
 
@@ -108,6 +113,12 @@ class ResourceAPIConfig(
     fun errorDecoder(): ErrorDecoder {
         return CustomErrorDecoder()
     }
+
+    @Bean
+    fun feignLoggerLevel(): Logger.Level {
+        return Logger.Level.FULL // Options: NONE, BASIC, HEADERS, FULL
+    }
+
 }
 
 // Error handling config

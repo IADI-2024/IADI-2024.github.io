@@ -1,6 +1,5 @@
 package org.example.service.config.filters
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import io.jsonwebtoken.ExpiredJwtException
 import io.jsonwebtoken.Jwts
 import jakarta.servlet.FilterChain
@@ -8,14 +7,14 @@ import jakarta.servlet.ServletRequest
 import jakarta.servlet.ServletResponse
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import org.springframework.security.core.Authentication
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.web.filter.GenericFilterBean
 import java.util.*
-import kotlin.collections.ArrayList
-import kotlin.collections.LinkedHashMap
 
 data class UserAuthToken(
     private val login:String,
@@ -40,6 +39,8 @@ data class UserAuthToken(
 
 class JWTAuthenticationFilter(val utils:JWTUtils): GenericFilterBean() {
 
+    val logger: Logger = LoggerFactory.getLogger(JWTAuthenticationFilter::class.java)
+
     override fun doFilter(request: ServletRequest?,
                           response: ServletResponse?,
                           chain: FilterChain?) {
@@ -57,6 +58,7 @@ class JWTAuthenticationFilter(val utils:JWTUtils): GenericFilterBean() {
                     val operation = it["operation"] as String
                     capabilities[key] = operation
                 }
+                logger.info("Registered capabilities ${capabilities.toString()}")
 
                 val authentication = UserAuthToken(
                     claims["username"] as String,
