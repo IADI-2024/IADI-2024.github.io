@@ -3,12 +3,10 @@ package org.example.service
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.example.service.config.filters.UserAuthToken
-import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.context.SecurityContext
 import org.springframework.security.core.context.SecurityContextHolder
@@ -21,10 +19,10 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 @Retention(AnnotationRetention.RUNTIME)
 @WithSecurityContext(factory = UserWithCapabilitiesFactory::class)
-annotation class WithUserAndCapabilities(val username: String, val capabilities: String, val role:String)
+annotation class WithMockUserAndCapabilities(val username: String, val capabilities: String, val role:String)
 
-class UserWithCapabilitiesFactory : WithSecurityContextFactory<WithUserAndCapabilities> {
-    override fun createSecurityContext(annotation: WithUserAndCapabilities?): SecurityContext {
+class UserWithCapabilitiesFactory : WithSecurityContextFactory<WithMockUserAndCapabilities> {
+    override fun createSecurityContext(annotation: WithMockUserAndCapabilities?): SecurityContext {
         val context = SecurityContextHolder.createEmptyContext()
         if (annotation != null ) {
             val authorities = listOf(SimpleGrantedAuthority("ROLE_${annotation.role}"))
@@ -57,7 +55,7 @@ class ServiceApplicationTests {
     }
 
     @Test
-    @WithUserAndCapabilities(
+    @WithMockUserAndCapabilities(
         username = "admin",
         role = "ADMIN",
         capabilities = "{\"1\":\"READ\"}",
@@ -70,7 +68,7 @@ class ServiceApplicationTests {
     }
 
     @Test
-    @WithUserAndCapabilities(
+    @WithMockUserAndCapabilities(
         username = "admin",
         role = "ADMIN",
         capabilities = "{\"1\":\"READ\"}",
@@ -83,7 +81,7 @@ class ServiceApplicationTests {
     }
 
     @Test
-    @WithUserAndCapabilities(
+    @WithMockUserAndCapabilities(
         username = "admin",
         role = "ADMIN",
         capabilities = "{\"1\":\"NONE\"}",
@@ -96,7 +94,7 @@ class ServiceApplicationTests {
     }
 
     @Test
-    @WithUserAndCapabilities(
+    @WithMockUserAndCapabilities(
         username = "admin",
         role = "ADMIN",
         capabilities = "{\"1\":\"ALL\",\"0\":\"CREATE\"}",
@@ -109,7 +107,7 @@ class ServiceApplicationTests {
     }
 
     @Test
-    @WithUserAndCapabilities(
+    @WithMockUserAndCapabilities(
         username = "admin",
         role = "ADMIN",
         capabilities = "{\"0\":\"ALL\"}",
@@ -122,7 +120,7 @@ class ServiceApplicationTests {
     }
 
     @Test
-    @WithUserAndCapabilities(
+    @WithMockUserAndCapabilities(
         username = "admin",
         role = "ADMIN",
         capabilities = "{\"0\":\"ALL\"}",
@@ -134,8 +132,34 @@ class ServiceApplicationTests {
             .andExpect(status().isOk)
     }
 
+   @Test
+    @WithMockUserAndCapabilities(
+        username = "admin",
+        role = "ADMIN",
+        capabilities = "{\"0\":\"ALL\"}",
+    )
+    fun `test 0 resource matcher on all resources`() {
+        val auth = SecurityContextHolder.getContext().authentication
+        mockMvc
+            .perform(get("/resources"))
+            .andExpect(status().isOk)
+    }
+
     @Test
-    @WithUserAndCapabilities(
+    @WithMockUserAndCapabilities(
+        username = "admin",
+        role = "ADMIN",
+        capabilities = "{\"1\":\"ALL\"}",
+    )
+    fun `test resource matcher of one resource on all resources`() {
+        val auth = SecurityContextHolder.getContext().authentication
+        mockMvc
+            .perform(get("/resources"))
+            .andExpect(status().isForbidden)
+    }
+
+    @Test
+    @WithMockUserAndCapabilities(
         username = "admin",
         role = "ADMIN",
         capabilities = "{\"0\":\"DELETE\"}",

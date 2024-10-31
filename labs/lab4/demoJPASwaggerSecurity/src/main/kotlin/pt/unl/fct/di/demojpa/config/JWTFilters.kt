@@ -130,26 +130,18 @@ class JWTAuthenticationFilter: GenericFilterBean() {
         if( authHeader != null && authHeader.startsWith("Bearer ") ) {
             val token = authHeader.substring(7) // Skip 7 characters for "Bearer "
             val claims = Jwts.parser().setSigningKey(JWTSecret.KEY).parseClaimsJws(token).body
-
-            // should check for token validity here (e.g. expiration date, session in db, etc.)
+            // parsing already checks validity
             val exp = (claims["exp"] as Int).toLong()
-            if ( exp < System.currentTimeMillis()/1000) // in seconds
+            val authentication = UserAuthToken(claims["username"] as String,
+                listOf(SimpleGrantedAuthority("ROLE_USER")))
+            // Can go to the database to get the actual user information (e.g. authorities)
 
-                (response as HttpServletResponse).sendError(HttpServletResponse.SC_UNAUTHORIZED) // RFC 6750 3.1
+            SecurityContextHolder.getContext().authentication = authentication
 
-            else {
+            // Renew token with extended time here. (before doFilter)
+            addResponseToken(authentication, response as HttpServletResponse)
 
-                val authentication = UserAuthToken(claims["username"] as String,
-                    listOf(SimpleGrantedAuthority("ROLE_USER")))
-                // Can go to the database to get the actual user information (e.g. authorities)
-
-                SecurityContextHolder.getContext().authentication = authentication
-
-                // Renew token with extended time here. (before doFilter)
-                addResponseToken(authentication, response as HttpServletResponse)
-
-                chain!!.doFilter(request, response)
-            }
+            chain!!.doFilter(request, response)
         } else {
             chain!!.doFilter(request, response)
         }

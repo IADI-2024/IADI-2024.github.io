@@ -25,7 +25,7 @@ data class ResourceWIdDTO(val id:Long, val data:String)
 
 // This is a dedicated client, with a dedicated configuration class
 //
-//, fallback = ResourceAPIFallback::class
+//, fallbackFactory = ResourceAPIFallbackFactory::class
 @FeignClient(name = "service",
              configuration = [ResourceAPIConfig::class])
 interface ResourceAPI {
