@@ -3,11 +3,15 @@
 
 ### Change log
 
-- 2023-10-08: Initial version, this is a draft, still up for discussion and receiving feedback. Some points are marked "TBA" (e.g., "more to come"). All changes will be reported in this area.
+- 2024-10-08: Initial version, this is a draft, still up for discussion and receiving feedback. Some points are marked "TBA" (e.g., "more to come"). All changes will be reported in this area.
+- 2024-11-12: Typo correction. Clarified that you can copy the code instead of forking the repository. Clarified the requirements to mention microservices which were only mentioned in the evaluation criteria.
+- 2024-11-12: Client-side application requirements added.
+- 2024-11-12: Client-side application evaluation criteria updated and clarified (Security and connection to server).
+- 2024-11-12: Client-side application specification (user-stories) added (Can be updated up to the end of the present week). 
 
 ## Introduction
 
-The topic for this yeas is a social network built around painting, tactile
+The topic for this year is a social network built around painting, tactile
 paintings, and its transformation pipelines. Users in our social network want to
 post the results of their efforts while using
 [Picastlo](https://picastlo.github.io), an [open-source
@@ -60,9 +64,9 @@ databases.
 
 The code provided as open-source includes a GUI that processes images with
 simple image transformations to produce tactile paintings. You should fork that
-repository and use that code to implement your GUI for the social network.
+repository and use that code, or just copy the code, to implement your GUI for the social network.
 
-### Requirements (in-progress)
+### Requirements
 
 #### Server-side system
 
@@ -76,7 +80,7 @@ necessary to run the application should be preloaded into the database.
 - OpenAPI live documentation should identify resources and sub-resources clearly to support the full life-cycle of the resources.
 - You should implement distributed model-based access control based on JWT tokens and capabilities.
 - You need to store pictures in blobs in the database.
-- more to come (TBA)
+- Server-side application should be implemented using microservices.
 
 #### Client application
 
@@ -89,7 +93,27 @@ TypeScript. The client application should work together with the server-side
 application to provide a full user experience. The connection to the server-side
 application should be done using the OpenAPI specification. 
 
-- more detailed requirements will be added.
+The UI should use a mainstream component library to achieve a professional look.
+
+#### User-stories to complete
+
+1. As an unregistered user, I want to access the picastlo social network homepage to see the first page of the public timeline of the system.
+2. As an unregistered user, I want to access the picastlo social network homepage to see a page of the public timeline of the system to see another page of public timeline of the system (next, previous, any number in between).
+2. As an unregistered user, I want to access the picastlo social network homepage to sign in to the system and see the homepage of the system.
+3. As a registered user, I want to access the picastlo social network homepage to see the homepage and see the first page of my own timeline with my posts, the public posts, my friends post, and the posts of the groups I am registered in.
+4. As a registered user, I want to access the picastlo social network homepage to see a page of my own timeline to see another page of my own timeline of the system (next, previous, any number in between). 
+5. As a registered user, I want to access the picastlo social network homepage and select my profile to see my own posts and my own pipelines.
+6. As a registered user, I want to access the picastlo social network homepage and select a group that I am registered in to see the first page of the posts in that timeline.
+As a registered user, I want to access the picastlo social network homepage and select a page of the timeline of a group that I am registered in to see another page of the posts in that timeline(next, previous, any number in between). 
+7. As a user, I want to access the picastlo social network homepage to see the first page of the list of users of the system.
+8. As a user, I want to access a page of the list of users of the system to see another page of the list of users of the system (next, previous, any number in between).
+9. As a user, I want to search the list of users by username and name.
+10. As a user, I want to select a user from the list of users and see their profile.
+11. As a user, I want to select a pipeline from the user profile and load it in picastlo GUI.
+12. As a user, I want to select a pipeline from a post and load it in picastlo GUI.
+13. As a user, I want to use the picastlo GUI to produce an image and export it.
+14. As a user, I want to exit the picastlo GUI and return to the homepage of the social network.
+15. As a registered user, I want to save a picastlo pipeline from the picastlo GUI to my profile.
 
 ### Evaluation Criteria (in-progress) 
 
@@ -108,13 +132,14 @@ application should be done using the OpenAPI specification.
 - Quality of the React component structure
 - Quality of the Redux state declaration
 - Completeness of UI functionality
+- Quality of the connection to the server
+- Management of security tokens
 - Generic UI aesthetics
 
 
 ## Working Teams 
 
-The project assignment should be done by teams of 3. If you cannot make a team of 3, talk to the instructor to authorize other solutions. 
-Team registration will be necessary shortly (method TBA).
+The project assignment should be done by teams of 3. If you cannot make a team of 3, talk to the instructor to authorize other solutions. Team registration will be necessary shortly (method TBA).
 
 ## Deliverables
 
@@ -136,7 +161,7 @@ All deliverables should be submitted by pushing them to the repository of the pr
 
 8. Presentation
 
-9. Report
+9. Report 
 
 10. Video with the deployment procedure
 

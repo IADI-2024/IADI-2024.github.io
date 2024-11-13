@@ -52,7 +52,7 @@ Please make an appointment by email.
 | 8  | 6 Nov, 7 Nov   | Project - Part 1 |
 | 8  | TBD  | Test 1 |
 | 9  | 11 Nov   | User-centric development - Client Side Reactive Programming (React) |
-| 9  | 13 Nov, 14 Nov   | No Lab Class  |
+| 9  | 13 Nov, 14 Nov   |   |
 | 10  | 18 Nov  | IFML and UI Design. IFML to React |
 | 10  | 20 Nov, 21 Nov   |  |
 | 11  | 25 Nov   | Client Side State Management |
