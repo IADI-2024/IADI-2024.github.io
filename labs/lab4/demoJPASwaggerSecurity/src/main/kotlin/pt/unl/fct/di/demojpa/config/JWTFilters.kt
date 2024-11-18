@@ -131,6 +131,7 @@ class JWTAuthenticationFilter: GenericFilterBean() {
             val token = authHeader.substring(7) // Skip 7 characters for "Bearer "
             val claims = Jwts.parser().setSigningKey(JWTSecret.KEY).parseClaimsJws(token).body
             // parsing already checks validity
+            // TODO: Catch the exception and translate it to a 401
             val exp = (claims["exp"] as Int).toLong()
             val authentication = UserAuthToken(claims["username"] as String,
                 listOf(SimpleGrantedAuthority("ROLE_USER")))

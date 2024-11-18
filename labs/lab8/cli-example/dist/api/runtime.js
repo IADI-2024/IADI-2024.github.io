@@ -26,7 +26,7 @@ exports.TextApiResponse = exports.BlobApiResponse = exports.VoidApiResponse = ex
 exports.querystring = querystring;
 exports.mapValues = mapValues;
 exports.canConsumeForm = canConsumeForm;
-exports.BASE_PATH = "http://localhost:8080".replace(/\/+$/, "");
+exports.BASE_PATH = "".replace(/\/+$/, "");
 class Configuration {
     constructor(configuration = {}) {
         this.configuration = configuration;

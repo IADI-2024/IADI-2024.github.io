@@ -110,7 +110,7 @@ class ServiceApplicationTests {
     @WithMockUserAndCapabilities(
         username = "admin",
         role = "ADMIN",
-        capabilities = "{\"John\":\"ALL\",\"0\":\"CREATE\"}",
+        capabilities = "{\"John\":\"ALL\",\"*\":\"CREATE\"}",
     )
     fun `test ALL Capability`() {
         val auth = SecurityContextHolder.getContext().authentication

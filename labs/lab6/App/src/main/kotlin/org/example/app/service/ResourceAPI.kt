@@ -21,9 +21,9 @@ import org.springframework.web.bind.annotation.RequestBody
 import java.util.*
 
 
-data class ResourceDTO(val data:String)
+data class ResourceDTO(val owner:String, val data:String)
 
-data class ResourceWIdDTO(val id:Long, val data:String)
+data class ResourceWIdDTO(val id:Long, val owner:String, val data:String)
 
 // This is a dedicated client, with a dedicated configuration class
 //

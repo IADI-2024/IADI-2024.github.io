@@ -15,7 +15,7 @@ class HelloController(val resources: ResourceAPI) {
     fun helloOne(@PathVariable id:Long) = resources.getOne(id)
 
     @PostMapping()
-    fun helloCreate() = resources.createResource(ResourceDTO("Hello, World!"))
+    fun helloCreate() = resources.createResource(ResourceDTO("John", "Hello, World!"))
 
     @ExceptionHandler(ForbiddenException::class)
     @ResponseStatus(HttpStatus.FORBIDDEN)

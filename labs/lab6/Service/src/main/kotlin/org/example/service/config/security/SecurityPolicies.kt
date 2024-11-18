@@ -1,6 +1,7 @@
 package org.example.service.config.security
 
 import org.example.service.config.filters.UserAuthToken
+import org.example.service.presentation.ResourceDTO
 import org.example.service.presentation.ResourceWIdDTO
 import org.springframework.security.access.prepost.PreAuthorize
 import org.springframework.stereotype.Service
@@ -17,9 +18,9 @@ class capabilitiesService {
             || operation != null && lessOrEqual("READ", operation) // can take into account a filter
     }
 
-    fun canCreate(user: Principal): Boolean {
+    fun canCreate(user: Principal, resourceDTO: ResourceDTO): Boolean {
         val capabilities = (user as UserAuthToken).capabilities
-        val operation = capabilities[user.name]
+        val operation = capabilities[resourceDTO.owner]
         return operation != null && lessOrEqual("CREATE", operation)
     }
 
@@ -47,7 +48,7 @@ class capabilitiesService {
 @PreAuthorize("@capabilitiesService.canReadAll(principal, #filter)")
 annotation class CanReadAllResources
 
-@PreAuthorize("@capabilitiesService.canCreate(principal)")
+@PreAuthorize("@capabilitiesService.canCreate(principal, #resource)")
 annotation class CanCreateResources
 
 @PreAuthorize("@capabilitiesService.canReadOne(principal, #id)")

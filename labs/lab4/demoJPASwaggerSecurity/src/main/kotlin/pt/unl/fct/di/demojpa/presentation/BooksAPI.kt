@@ -8,11 +8,14 @@ import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
+import pt.unl.fct.di.demojpa.config.security.CanAddBooks
+import pt.unl.fct.di.demojpa.config.security.CanReadAllBooks
+import pt.unl.fct.di.demojpa.config.security.CanReadOneBook
 
 @Schema(name="Book")
 data class BookDTO(val id:Long, val name:String, val kind:CategoryInBookDTO)
 
-@Schema(name="Short Category in Book", description = "Short version of the category")
+@Schema(name="ShortCategoryinBook", description = "Short version of the category")
 data class CategoryInBookDTO(val id:Long, val name:String)
 
 @Schema(name="Category")
@@ -30,6 +33,7 @@ interface BooksAPI {
         ApiResponse(responseCode = "200", description = "The list of books that are in the system"),
         ApiResponse(responseCode = "500", description = "Internal server error")
     ])
+    @CanReadAllBooks
     fun getAllBooks():List<BookDTO>
 
     @PostMapping("")
@@ -40,6 +44,7 @@ interface BooksAPI {
         ApiResponse(responseCode = "404", description = "Category not found"),
         ApiResponse(responseCode = "500", description = "Internal server error")
     ])
+    @CanAddBooks
     fun addBook(book:BookDTO)
 
     @GetMapping("{id}")
@@ -49,5 +54,6 @@ interface BooksAPI {
         ApiResponse(responseCode = "404", description = "Book not found"),
         ApiResponse(responseCode = "500", description = "Internal server error")
     ])
+    @CanReadOneBook
     fun getBookById(id:Long):BookDTO
 }

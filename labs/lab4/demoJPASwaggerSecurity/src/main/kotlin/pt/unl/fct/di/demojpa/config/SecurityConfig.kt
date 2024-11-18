@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 import org.springframework.security.config.annotation.web.invoke
@@ -25,6 +26,7 @@ import pt.unl.fct.di.demojpa.service.UserService
 // check: https://docs.spring.io/spring-security/reference/servlet/getting-started.html
 
 @EnableWebSecurity
+@EnableMethodSecurity
 @Configuration
 open class SecurityConfig {
 
