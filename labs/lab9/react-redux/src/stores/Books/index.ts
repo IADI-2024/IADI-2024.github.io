@@ -8,7 +8,7 @@ export interface BooksState {
 
 const initialState:BooksState = { books: [], loading: false}
 
-const bookSlice = createSlice({
+const slice = createSlice({
     name: 'books',
     initialState,
     reducers: {
@@ -25,14 +25,14 @@ const bookSlice = createSlice({
     },
 });
 
-const {setBooks, setLoading}= bookSlice.actions
+const {setBooks, setLoading}= slice.actions
 
-export const actionAddBook = bookSlice.actions.addBook
+export const actionAddBook = slice.actions.addBook
 
 // This is only for demo
 const config = new Configuration({
     headers: {
-      "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKU09OIFdlYiBUb2tlbiBmb3IgSUFESSAyMDIyLzIwMjMiLCJyb2xlcyI6IlVTRVIsIERSSVZFUiIsImV4cCI6MTczMjA1OTI4NCwiaWF0IjoxNzMyMDU4Njg0LCJ1c2VybmFtZSI6ImFkbWluIn0.iDCaAzqztkLDdegzHHVKH36GMuNdc0Q1urY0zGOONBc",
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKU09OIFdlYiBUb2tlbiBmb3IgSUFESSAyMDIyLzIwMjMiLCJyb2xlcyI6IlVTRVIsIERSSVZFUiIsImV4cCI6MTczMjA2MDEyNiwiaWF0IjoxNzMyMDU5NTI2LCJ1c2VybmFtZSI6ImFkbWluIn0.1eXWQc4KRWlvxve68kLfRPulD7V_e640GJEMr8nzvrA",
     },
   });
   
@@ -44,6 +44,6 @@ export const actionLoadBooks = (filter:string="") => async (dispatch: any) => {
     .then( books => dispatch(setBooks(books.map( b => b.name ))))    
 }
 
-export default bookSlice.reducer
+export default slice.reducer
 
 
