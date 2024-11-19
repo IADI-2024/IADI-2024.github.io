@@ -46,3 +46,10 @@ npm run build
 npm start
 ```
 
+# Redux toolkit 
+
+To start with redux toolkit
+
+```
+npm install @reduxjs/toolkit --save
+```

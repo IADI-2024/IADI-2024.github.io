@@ -1,1 +1,3 @@
-console.log("Hello World!")
+import {demo} from './store3'
+
+demo()
