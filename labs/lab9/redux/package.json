@@ -1,0 +1,16 @@
+{
+  "name": "redux",
+  "version": "1.0.0",
+  "description": "First you want to create a simple typescript application",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
