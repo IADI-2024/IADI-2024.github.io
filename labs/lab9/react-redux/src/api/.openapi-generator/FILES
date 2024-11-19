@@ -1,0 +1,8 @@
+.openapi-generator-ignore
+apis/BooksApi.ts
+apis/index.ts
+index.ts
+models/Book.ts
+models/ShortCategoryinBook.ts
+models/index.ts
+runtime.ts

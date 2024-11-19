@@ -8,8 +8,8 @@ import pt.unl.fct.di.demojpa.application.BooksApplication
 @RestController
 class BooksController(val app: BooksApplication) : BooksAPI {
 
-    override fun getAllBooks(): List<BookDTO> =
-        app.getAllBooks().map {
+    override fun getAllBooks(filter:String): List<BookDTO> =
+        app.getAllBooks(filter).map {
             BookDTO(it.id, it.name, CategoryInBookDTO(it.kind.id, it.kind.name))
         }
 

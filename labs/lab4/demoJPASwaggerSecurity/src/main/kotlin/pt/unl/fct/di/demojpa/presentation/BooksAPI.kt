@@ -8,6 +8,7 @@ import io.swagger.v3.oas.annotations.tags.Tag
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 import pt.unl.fct.di.demojpa.config.security.CanAddBooks
 import pt.unl.fct.di.demojpa.config.security.CanReadAllBooks
 import pt.unl.fct.di.demojpa.config.security.CanReadOneBook
@@ -34,7 +35,7 @@ interface BooksAPI {
         ApiResponse(responseCode = "500", description = "Internal server error")
     ])
     @CanReadAllBooks
-    fun getAllBooks():List<BookDTO>
+    fun getAllBooks(@RequestParam(value = "", required = false) filter:String):List<BookDTO>
 
     @PostMapping("")
     @Operation(summary = "Add a new book")
