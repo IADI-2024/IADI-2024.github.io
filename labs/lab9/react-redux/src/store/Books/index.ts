@@ -3,10 +3,11 @@ import { BooksApi, Configuration } from '../../api';
 
 export interface BooksState {
     books:string[],
-    loading:boolean
+    loading:boolean,
+    uploading:boolean
 }
 
-const initialState:BooksState = { books: [], loading: false}
+const initialState:BooksState = { books: [], loading: false, uploading:false}
 
 const slice = createSlice({
     name: 'books',
@@ -21,18 +22,19 @@ const slice = createSlice({
         },
         setLoading: (state, action:PayloadAction<boolean>) => {
             state.loading = action.payload
+        },
+        setUploading: (state, action:PayloadAction<boolean>) => {
+            state.uploading = action.payload
         }
     },
 });
 
-const {setBooks, setLoading}= slice.actions
-
-export const actionAddBook = slice.actions.addBook
+const {setBooks, setLoading, setUploading, addBook }= slice.actions
 
 // This is only for demo
 const config = new Configuration({
     headers: {
-      "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKU09OIFdlYiBUb2tlbiBmb3IgSUFESSAyMDIyLzIwMjMiLCJyb2xlcyI6IlVTRVIsIERSSVZFUiIsImV4cCI6MTczMjA5ODI3NSwiaWF0IjoxNzMyMDk3Njc1LCJ1c2VybmFtZSI6ImFkbWluIn0.ERM_ieHdKs1nhvY9LiY6_pXidFnchT9_vSQozsfdJO8",
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKU09OIFdlYiBUb2tlbiBmb3IgSUFESSAyMDIyLzIwMjMiLCJyb2xlcyI6IlVTRVIsIERSSVZFUiIsImV4cCI6MTczMjEwNjQ3MSwiaWF0IjoxNzMyMTA1ODcxLCJ1c2VybmFtZSI6ImFkbWluIn0.OJnpcTVCyeA3g8t10isM6Wzb1x18JQAnuvAGAgOgAv0",
     },
   });
   
@@ -41,7 +43,13 @@ const api = new BooksApi(config);
 export const actionLoadBooks = (filter:string="") => async (dispatch: any) => {
     dispatch(setLoading(true))
     api.getAllBooks({filter})
-    .then( books => dispatch(setBooks(books.map( b => b.name ))))    
+    .then( books => { dispatch(setBooks(books.map( b => b.name )))})    
+}
+
+export const actionAddBook = (name:string) => async (dispatch:any) => {
+    dispatch(setUploading(true))
+    api.addBook({book:{id:0, name, kind:{id:0, name:'dunno'}}})
+    .then( x => dispatch(addBook(name)))
 }
 
 export default slice.reducer

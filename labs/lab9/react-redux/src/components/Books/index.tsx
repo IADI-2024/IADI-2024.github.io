@@ -19,5 +19,6 @@ export const BookCounter = () => {
 }
 
 export * from './SearchBox'
+export * from './BookForm'
 
 export default BooksList

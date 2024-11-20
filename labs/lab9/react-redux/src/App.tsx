@@ -1,6 +1,6 @@
 import './App.css';
 import Counter from './components/Counter';
-import BooksList, { BookCounter, SearchBox } from './components/Books';
+import BooksList, { BookCounter, SearchBox, BookForm } from './components/Books';
 import { Provider, useSelector } from 'react-redux'
 import { GlobalState, store } from './store';
 
@@ -10,10 +10,12 @@ function App() {
 
   return (
    <div>
-    <SearchBox/>
-    <Counter/>
+    <BookForm/>
     <BookCounter/>
+    <SearchBox/>
+    {counter}
     <BooksList/>
+    <Counter/>
     </div>
   );
 }
