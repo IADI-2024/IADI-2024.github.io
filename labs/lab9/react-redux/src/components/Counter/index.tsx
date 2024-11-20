@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
-import { GlobalState } from "../../stores"
-import { actionDecrement, actionIncrement } from "../../stores/Counter"
+import { GlobalState } from "../../store"
+import { actionDecrement, actionIncrement } from "../../store/Counter"
 
 export const Counter = () => {
 

@@ -32,7 +32,7 @@ export const actionAddBook = slice.actions.addBook
 // This is only for demo
 const config = new Configuration({
     headers: {
-      "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKU09OIFdlYiBUb2tlbiBmb3IgSUFESSAyMDIyLzIwMjMiLCJyb2xlcyI6IlVTRVIsIERSSVZFUiIsImV4cCI6MTczMjA2MDEyNiwiaWF0IjoxNzMyMDU5NTI2LCJ1c2VybmFtZSI6ImFkbWluIn0.1eXWQc4KRWlvxve68kLfRPulD7V_e640GJEMr8nzvrA",
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKU09OIFdlYiBUb2tlbiBmb3IgSUFESSAyMDIyLzIwMjMiLCJyb2xlcyI6IlVTRVIsIERSSVZFUiIsImV4cCI6MTczMjA5ODI3NSwiaWF0IjoxNzMyMDk3Njc1LCJ1c2VybmFtZSI6ImFkbWluIn0.ERM_ieHdKs1nhvY9LiY6_pXidFnchT9_vSQozsfdJO8",
     },
   });
   

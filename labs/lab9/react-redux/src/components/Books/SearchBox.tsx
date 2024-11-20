@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { actionLoadBooks } from "../../stores/Books"
+import { actionLoadBooks } from "../../store/Books"
 
 export const SearchBox = () => {
 

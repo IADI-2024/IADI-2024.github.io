@@ -1,15 +1,18 @@
 import './App.css';
 import Counter from './components/Counter';
-import BooksList from './components/Books';
-import { Provider } from 'react-redux'
-import { store } from './stores';
-import { SearchBox } from './components/Books/SearchBox';
+import BooksList, { BookCounter, SearchBox } from './components/Books';
+import { Provider, useSelector } from 'react-redux'
+import { GlobalState, store } from './store';
 
 function App() {
+
+  const counter = useSelector((state:GlobalState) => state.counter)
+
   return (
    <div>
-    <Counter/>
     <SearchBox/>
+    <Counter/>
+    <BookCounter/>
     <BooksList/>
     </div>
   );
