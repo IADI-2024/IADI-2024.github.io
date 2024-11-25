@@ -13,10 +13,8 @@ const counterSlice = (0, toolkit_1.createSlice)({
         decrement: (state) => state - 1
     },
 });
-_a = counterSlice.actions, exports.increment = _a.increment, exports.decrement = _a.decrement;
 const store = (0, toolkit_1.configureStore)(counterSlice);
-exports.default = counterSlice.reducer;
-// Demo only
+_a = counterSlice.actions, exports.increment = _a.increment, exports.decrement = _a.decrement;
 function demo() {
     console.log(store.getState());
     store.dispatch((0, exports.increment)());
@@ -28,3 +26,5 @@ function demo() {
     store.dispatch((0, exports.decrement)());
     console.log(store.getState());
 }
+exports.default = counterSlice.reducer;
+// Demo only

@@ -2,7 +2,7 @@ import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type CounterState = number
   
-const initialState = 0
+const initialState: CounterState = 0
 
 const counterSlice = createSlice({
     name: 'counter',
@@ -13,13 +13,18 @@ const counterSlice = createSlice({
     },
   });
   
-export const { increment, decrement } = counterSlice.actions;
-
 const store = configureStore(counterSlice);
 
-export default counterSlice.reducer
-  
-// Demo only
+export const { increment, decrement } = counterSlice.actions;
+
+
+
+
+
+
+
+
+
 
 export function demo() {
   console.log(store.getState())
@@ -32,3 +37,19 @@ export function demo() {
   store.dispatch(decrement())
   console.log(store.getState())  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+export default counterSlice.reducer
+  
+// Demo only
+

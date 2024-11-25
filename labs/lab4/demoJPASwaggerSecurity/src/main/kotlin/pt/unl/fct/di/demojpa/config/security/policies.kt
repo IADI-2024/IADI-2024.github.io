@@ -5,7 +5,7 @@ import org.springframework.security.access.prepost.PreAuthorize
 @PreAuthorize("hasRole('USER')")
 annotation class CanReadAllBooks
 
-@PreAuthorize("hasRole('ADMIN')")
+@PreAuthorize("hasRole('USER')")
 annotation class CanAddBooks
 
 @PreAuthorize("hasRole('USER') and @securityService.canReadOneBook(principal,#id)")

@@ -34,7 +34,7 @@ const {setBooks, setLoading, setUploading, addBook }= slice.actions
 // This is only for demo
 const config = new Configuration({
     headers: {
-      "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKU09OIFdlYiBUb2tlbiBmb3IgSUFESSAyMDIyLzIwMjMiLCJyb2xlcyI6IlVTRVIsIERSSVZFUiIsImV4cCI6MTczMjEwNjQ3MSwiaWF0IjoxNzMyMTA1ODcxLCJ1c2VybmFtZSI6ImFkbWluIn0.OJnpcTVCyeA3g8t10isM6Wzb1x18JQAnuvAGAgOgAv0",
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKU09OIFdlYiBUb2tlbiBmb3IgSUFESSAyMDIyLzIwMjMiLCJyb2xlcyI6IlVTRVIsIERSSVZFUiIsImV4cCI6MTczMjIwMjI2NiwiaWF0IjoxNzMyMjAxNjY2LCJ1c2VybmFtZSI6ImFkbWluIn0.6MtnTekOYGCF0Trvfw-kbAFLPdZ8PnYP8taVuj656UE",
     },
   });
   

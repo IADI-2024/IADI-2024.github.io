@@ -1,11 +1,14 @@
 import { configureStore, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface CounterState {time: string, timezone:string}
+interface ClockState {time: string, timezone:string}
   
-const initialState = {time: new Date().toLocaleString("pt-PT", { timeZone: "America/New_York" }), timezone:"America/New_York"}
+const initialState:ClockState = {
+  time: new Date().toLocaleString("pt-PT", { timeZone: "America/New_York" }), 
+  timezone:"America/New_York"
+}
 
-const counterSlice = createSlice({
-    name: 'counter',
+const clockSlice = createSlice({
+    name: 'clock',
     initialState,
     reducers: {
       tick: (state) => { state.time = new Date().toLocaleString("pt-PT", { timeZone: state.timezone }) },
@@ -14,11 +17,11 @@ const counterSlice = createSlice({
   });
   
 
-const store = configureStore(counterSlice);
+const store = configureStore(clockSlice);
 
-export const { tick, setTimeZone } = counterSlice.actions;
+export const { tick, setTimeZone } = clockSlice.actions;
 
-export default counterSlice.reducer;
+export default clockSlice.reducer;
 
 
 // Demo only

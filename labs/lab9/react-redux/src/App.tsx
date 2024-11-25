@@ -10,12 +10,12 @@ function App() {
 
   return (
    <div>
-    <BookForm/>
+    {counter}
+    <Counter/>
     <BookCounter/>
     <SearchBox/>
-    {counter}
+    <BookForm/>
     <BooksList/>
-    <Counter/>
     </div>
   );
 }
