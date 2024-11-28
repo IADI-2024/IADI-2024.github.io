@@ -8,6 +8,7 @@
 - 2024-11-12: Client-side application requirements added.
 - 2024-11-12: Client-side application evaluation criteria updated and clarified (Security and connection to server).
 - 2024-11-12: Client-side application specification (user-stories) added (Can be updated up to the end of the present week). 
+- 2024-11-28: Detailed the evaluation criteria
 
 ## Introduction
 
@@ -115,7 +116,7 @@ As a registered user, I want to access the picastlo social network homepage and 
 14. As a user, I want to exit the picastlo GUI and return to the homepage of the social network.
 15. As a registered user, I want to save a picastlo pipeline from the picastlo GUI to my profile.
 
-### Evaluation Criteria (in-progress) 
+### Evaluation Criteria
 
 #### Server-side system
 
@@ -127,7 +128,20 @@ As a registered user, I want to access the picastlo social network homepage and 
 - The quality and amount of seed data used in the presented prototype
 - Quality of documentation to deploy the application
 
-#### Client application
+##### More Detailed Criteria
+
+- Correctness of the REST API in all components (based on the presented openAPI pdf, open and closed)
+- Completeness of the open API specification for all components
+- Structure, domain, and databases of services 
+- Completeness of Tests (not quantity). Unit tests, integration tests, positive tests, negative tests, including mock components, including security mechanisms, including mock users and roles
+- Completeness of behaviour, shown in the submitted video
+- Quality of Seed data
+- Quality of Code (DTOs, DAOs, FeignClients)
+- Quality of Code in Access control (annotations, services, capabilities, etc.)
+- Quality of Interseptors
+- Quality of Layered Architecture 
+
+#### Client application 
 
 - Quality of the React component structure
 - Quality of the Redux state declaration
