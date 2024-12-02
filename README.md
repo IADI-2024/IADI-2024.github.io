@@ -46,23 +46,21 @@ Please make an appointment by email.
 | 5  | 16, 17 Out   | An architecture of micro-services | | 
 | 6  | 21 Out   | No Lecture (SPLASH 2024) | 
 | 6  | 23, 24 Out   | No Lab Class | 
-| 7  | 28 Out   | Token-Based Security and Micro-services | [slides](slides/IADI%20slides%202024%20-%206.pdf) | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab5
-| 7  | 30 Out, 31 Out | Security in microservices, capabilities. |
-| 8  | 4 Nov   |  Q&A  |
-| 8  | 6 Nov, 7 Nov   | Project - Part 1 |
+| 7  | 28 Out   | Token-Based Security and Micro-services | [slides](slides/IADI%20slides%202024%20-%206.pdf) | 
+| 7  | 30 Out, 31 Out | Security in microservices, capabilities. | | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab5 
+| 8  | 4 Nov   |  Q&A  | [slides](slides/IADI%20slides%202024%20-%207.pdf)
+| 8  | 6 Nov, 7 Nov   | Project - Part 1 | | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab6
 | 8  | TBD  | Test 1 |
-| 9  | 11 Nov   | User-centric development - Client Side Reactive Programming (React) |
-| 9  | 13 Nov, 14 Nov   |   |
-| 10  | 18 Nov  | IFML and UI Design. IFML to React |
-| 10  | 20 Nov, 21 Nov   |  |
-| 11  | 25 Nov   | Client Side State Management |
-| 11  | 27 Nov, 28 Nov   |  |
-| 12  | 2 Dez   | TBD |
-| 12  | 4 Dez, 5 Dez   |  |
-| 13  | 9 Dez   |  Q&A 
-| 13  | TBD | Evaluation week - Test 2
-| 13  | 11 Dez, 12 Dez   |  |
-| 14  | 16 Dez   | Evaluation week |
-| 14  | 18 Dez, 19 Dez   | Project - Part 2 |
-
-(The dates for projects and tests are temporary and will be updated in the future)
+| 9  | 11 Nov   | User-centric development - Client Side Reactive Programming (React)  | [slides](slides/IADI%20slides%202024%20-%208.pdf)
+| 9  | 13 Nov, 14 Nov   |  Building a React Application | | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab8
+| 10  | 18 Nov  | IFML and UI Design. IFML to React | [slides](slides/IADI%20slides%202024%20-%209.pdf)
+| 10  | 20 Nov, 21 Nov   | Connecting to the Server, Redux, Async Actions | | [Repo](https://github.com/IADI-2024/IADI-2024.github.io) - lab9
+| 11  | 25 Nov   | Client Side State Management | [slides](slides/IADI%20slides%202024%20-%2010.pdf)
+| 11  | 27 Nov, 28 Nov  | Project Support |
+| 12  | 2 Dez   | Q&A - Recap and Trends | [slides](slides/IADI%20slides%202024%20-%2011.pdf)
+| 12  | 4 Dez, 5 Dez   | Project support |
+| 13  | 9 Dez   | Evaluation week - project support
+| 13  | 11 Dez, 12 Dez   | Evaluation week - project support
+| 14  | 16 Dez   | Evaluation week - project support
+| 14  | 18 Dez | Test 2
+| 14  |  19 Dez   | Project - Part 2 |
