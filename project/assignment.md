@@ -213,7 +213,9 @@ List the user stories that were completed
 
 Complement the diagram above with a bullet list of descriptions of microservices, highlighting the resources that each processes and the main operations that it supports (API). Describe the security rules that each component implements together with the capability language that supports the rules. Include the rules to produce the capabilities and the rules to use the capabilities.
 
-(do not include the API pdf in its full detail)
+Include the API specification (do not include the API pdf in its full detail)
+
+Include the IFML diagrams and comment on its mapping to React components and Redux Actions.
 
 Your report may include links to the code in the github repository (use links of lines of code if needed).
 
