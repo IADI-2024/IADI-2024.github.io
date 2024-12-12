@@ -9,6 +9,7 @@
 - 2024-11-12: Client-side application evaluation criteria updated and clarified (Security and connection to server).
 - 2024-11-12: Client-side application specification (user-stories) added (Can be updated up to the end of the present week). 
 - 2024-11-28: Detailed the evaluation criteria
+- 2024-12-10: Added topics for the report and dates for presentations
 
 ## Introduction
 
@@ -193,3 +194,52 @@ You should receive the link to the assignment by email and instructions to regis
 First submission: 2024-11-03
 
 Second submission: 2024-12-19
+
+Presentation dates: 2024-12-16 to 2024-12-20 (check your email to schedule a slot)
+
+## Topics to be addressed in the report
+
+Your report should include the following sections.
+
+# System Architecture
+
+Use a simple block diagram to represent the components of the whole system (microservices, services, gateways, proxys, databases, etc.) and lines/arrows for data flows. Highlight what were your contributions. 
+
+# User stories
+
+List the user stories that were completed
+
+# Description of the Application and Microservice
+
+Complement the diagram above with a bullet list of descriptions of microservices, highlighting the resources that each processes and the main operations that it supports (API). Describe the security rules that each component implements together with the capability language that supports the rules. Include the rules to produce the capabilities and the rules to use the capabilities.
+
+Include the API specification (do not include the API pdf in its full detail)
+
+Include the IFML diagrams and comment on its mapping to React components and Redux Actions.
+
+Your report may include links to the code in the github repository (use links of lines of code if needed).
+
+# Assessement
+
+Present a table with the self assessement using percentages of fullfilment in the following topics (100% it's perfect, >50% needs improvement, <50% has flaws or is incomplete):
+
+- System Architecture (Micro-services)
+- Internal Architecture of Components (Layered Architecture, DAO, DTO, internal Services)
+- Architecture of Client Application (React/Redux/Async/OpenAPI)
+- REST API of Application
+- REST API of Services
+- Use of OpenAPI
+- Seed Data Used
+- Secure Connection between Application and Services
+- Completeness of Tests
+- Tests of security policies
+
+# Use of AI tools
+
+Please describe the use of AI tools in the development of the project. Are there components that you would not claim ownership of because of AI? If used, what were the positive and negative aspects of using AI tools.
+
+# Conclusions
+
+Learning Outcomes, challenges, difficulies, time spent, positive aspects, not positive aspects of the project.
+
+
